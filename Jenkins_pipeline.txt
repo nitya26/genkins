@@ -14,7 +14,7 @@ pipeline {
             post{
             success{
                 emailext to: gayatridevikagapu@gmail.com,
-                body: Test Email,
+                body: Test Email 2,
                 subject: Testing Email Extension
             }
         }
