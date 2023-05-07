@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+     environment{
+         DIRECTORY_PATH= CUserstpsldGIT_CODE
+         TESTING_ENVIRONMENT= unit testing
+         PRODUCTION_ENVIRONMENT= Nitya Porwal
+    }
+    stages {
+        stage('Build') {
+            steps {
+                echo fetch the source code from the directory path specified by the environment variable $DIRECTORY_PATH
+             
+            }
+            post{
+            success{
+                emailext to gayatridevikagapu@gmail.com,
+                body Test Email,
+                subject Testing Email Extension
+            }
+        }
+    }
+}    
