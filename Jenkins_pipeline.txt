@@ -1,14 +1,10 @@
 pipeline {
     agent any
-     environment{
-         DIRECTORY_PATH= CUserstpsldGIT_CODE
-         TESTING_ENVIRONMENT= unit testing
-         PRODUCTION_ENVIRONMENT= Nitya Porwal
-    }
+     
     stages {
         stage('Build') {
             steps {
-                echo fetch the source code from the directory path specified by the environment variable $DIRECTORY_PATH
+                echo "fetch the source code from the directory path specified by the environment variable XXX_PATH"
              
             }
             post{
